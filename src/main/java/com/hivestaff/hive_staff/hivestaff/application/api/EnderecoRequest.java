@@ -1,8 +1,6 @@
 package com.hivestaff.hive_staff.hivestaff.application.api;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Value;
 @Data
 public class EnderecoRequest {
     private String cep;

@@ -17,7 +17,7 @@ public class FuncionarioRequest {
     @NotBlank (message = "Nome obrigatório")
     private String nome;
     private String designacao;
-    private double salario;
+    private String salario;
     @NotNull
     private String numeroTelefone;
     private EnderecoRequest endereco;
@@ -25,7 +25,7 @@ public class FuncionarioRequest {
     private String dataNascimento;
     @CPF
     @NotBlank
-    @Size(min = 11, max = 11, message = "O cpf deve conter 11 digitos")
+    @Size(min = 11, max = 14, message = "O cpf deve conter 11 digitos")
     private String cpf;
-    private LocalDateTime dataCadastro;
+
 }

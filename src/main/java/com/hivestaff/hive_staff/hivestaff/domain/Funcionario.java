@@ -24,7 +24,7 @@ public class Funcionario {
     @NotBlank
     private String nome;
     private String designacao;
-    private double salario;
+    private String salario;
     private String numeroTelefone;
     private Endereco endereco;
     private Sexo sexo;
