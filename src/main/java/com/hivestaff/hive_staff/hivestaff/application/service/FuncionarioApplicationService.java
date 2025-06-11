@@ -1,5 +1,6 @@
 package com.hivestaff.hive_staff.hivestaff.application.service;
 
+import com.hivestaff.hive_staff.hivestaff.application.api.FuncionarioAtualizacaoRequest;
 import com.hivestaff.hive_staff.hivestaff.application.api.FuncionarioDetalhadoResponse;
 import com.hivestaff.hive_staff.hivestaff.application.api.FuncionarioRequest;
 import com.hivestaff.hive_staff.hivestaff.application.api.FuncionarioResponse;
@@ -40,5 +41,15 @@ public class FuncionarioApplicationService implements FuncionarioService {
         Funcionario funcionario = funcionarioRepository.buscaFuncionarioPorId(idFuncionario);
         funcionarioRepository.deletaFuncionario(funcionario);
         log.info("[finaliza] FuncionarioApplicationService - deletaPorId");
+    }
+
+    @Override
+    public void atualizaPorId(UUID idFuncionario, FuncionarioAtualizacaoRequest atualizaFuncionarioPorId) {
+        log.info("[inicia] FuncionarioApplicationService - atualizaPorId");
+        log.info("[idFuncionario] {}", idFuncionario);
+        Funcionario funcionario = funcionarioRepository.buscaFuncionarioPorId(idFuncionario);
+        funcionario.atualiza(atualizaFuncionarioPorId);
+        funcionarioRepository.salva(funcionario);
+        log.info("[finaliza] FuncionarioApplicationService - atualizaPorId");
     }
 }

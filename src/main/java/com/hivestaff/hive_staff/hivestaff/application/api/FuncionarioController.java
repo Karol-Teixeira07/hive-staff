@@ -37,4 +37,12 @@ public class FuncionarioController implements FuncionarioApi {
         funcionarioService.deletaPorId(idFuncionario);
         log.info("[finaliza] FuncionarioController - deletaFuncionarioPorId");
     }
+
+    @Override
+    public void atualizaFuncionarioPorId(UUID idFuncionario, FuncionarioAtualizacaoRequest atualizaFuncionarioPorId) {
+        log.info("[inicia] FuncionarioController - atualizaFuncionarioPorId");
+        log.info("[idFuncionario] {}", idFuncionario);
+        funcionarioService.atualizaPorId(idFuncionario, atualizaFuncionarioPorId);
+        log.info("[finaliza] FuncionarioController - atualizaFuncionarioPorId");
+    }
 }

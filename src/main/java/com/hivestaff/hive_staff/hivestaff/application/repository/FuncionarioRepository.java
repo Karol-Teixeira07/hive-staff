@@ -10,4 +10,6 @@ public interface FuncionarioRepository {
     Funcionario buscaFuncionarioPorId(UUID idFuncionario);
 
     void deletaFuncionario(Funcionario funcionario);
+
+    void atualiza(Funcionario funcionario);
 }

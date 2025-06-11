@@ -40,4 +40,11 @@ public class FuncionarioInfraRepository implements FuncionarioRepository {
         funcionarioMongoSpringRepository.delete(funcionario);
         log.info("[finaliza] FuncionarioInfraRepository - deletaFuncionarioPorId");
     }
+
+    @Override
+    public void atualiza(Funcionario funcionario) {
+        log.info("[inicia] FuncionarioInfraRepository - atualizaFuncionarioPorId");
+        funcionarioMongoSpringRepository.save(funcionario);
+        log.info("[finaliza] FuncionarioInfraRepository - atualizaFuncionarioPorId");
+    }
 }

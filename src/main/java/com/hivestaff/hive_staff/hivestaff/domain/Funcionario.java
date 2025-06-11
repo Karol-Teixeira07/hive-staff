@@ -1,5 +1,6 @@
 package com.hivestaff.hive_staff.hivestaff.domain;
 
+import com.hivestaff.hive_staff.hivestaff.application.api.FuncionarioAtualizacaoRequest;
 import com.hivestaff.hive_staff.hivestaff.application.api.FuncionarioRequest;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -45,5 +46,27 @@ public class Funcionario {
         this.designacao = funcionarioRequest.getDesignacao();
         this.nome = funcionarioRequest.getNome();
         this.idFuncionario = UUID.randomUUID();
+    }
+
+
+    public void atualiza(FuncionarioAtualizacaoRequest atualizaFuncionarioPorId) {
+        if (atualizaFuncionarioPorId.getNome() != null) {
+            this.nome = atualizaFuncionarioPorId.getNome();
+        }
+        if (atualizaFuncionarioPorId.getSalario() != null) {
+            this.salario = atualizaFuncionarioPorId.getSalario();
+        }
+        if (atualizaFuncionarioPorId.getEndereco() != null) {
+            this.endereco = atualizaFuncionarioPorId.getEndereco();
+        }
+        if (atualizaFuncionarioPorId.getNumeroTelefone() != null) {
+            this.numeroTelefone = atualizaFuncionarioPorId.getNumeroTelefone();
+        }
+        if (atualizaFuncionarioPorId.getDesignacao() != null) {
+            this.designacao = atualizaFuncionarioPorId.getDesignacao();
+        }
+        if (atualizaFuncionarioPorId.getDataNascimento() != null) {
+            this.dataNascimento = atualizaFuncionarioPorId.getDataNascimento();
+        }
     }
 }
