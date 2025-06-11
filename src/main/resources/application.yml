@@ -1,0 +1,14 @@
+server:
+  servlet:
+    context-path: /hivestaff/api
+
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: ${MONGO_DB_URI:mongodb+srv://karolteixeira07:Q8ojnvBoGLQrIjNJ@wakanda.1v9kw.mongodb.net/hivestaff?retryWrites=true&w=majority&appName=Wakanda}
+      auto-index-creation: true
+
+springdoc:
+  swagger-ui:
+    path: /public/swagger
